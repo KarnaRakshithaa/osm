@@ -1,78 +1,37 @@
-//apply plugin: 'com.android.application'
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
 
-plugins {
-    id 'com.android.application'
+buildscript {
+    ext.kotlin_version = '1.3.50'
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()  // Maven Central repository
+        
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.3.1'
+//        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
 
-    // Add the Google services Gradle plugin
-    id 'com.google.gms.google-services'
+        // Add the dependency for the Google services Gradle plugin
+        classpath 'com.google.gms:google-services:4.3.15'
 
+    }
 }
 
-//apply plugin: 'kotlin-android'
-//
-//apply plugin: 'kotlin-android-extensions'
+allprojects {
+    repositories {
+        google()
+        jcenter()
 
-android {
-    compileSdkVersion 33
-//    buildToolsVersion "29.0.2"
-    defaultConfig {
-        applicationId "ir.aio.osm"
-        minSdkVersion 23
-        targetSdkVersion 33
-        multiDexEnabled true
-        versionCode 1
-        versionName "1.0"
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-    }
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-    }
-    buildFeatures {
-        viewBinding true
-    }
+        mavenCentral()
+        mavenLocal()
 
+        maven { url "https://jitpack.io" }
+    }
 }
-//compile project('org.osmdroid:osmdroid-shape:VERSION')
-dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-//    implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
-    implementation 'androidx.appcompat:appcompat:1.1.0'
-    implementation 'androidx.core:core-ktx:1.1.0'
-    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    implementation 'com.google.android.material:material:1.9.0'
-    implementation "androidx.recyclerview:recyclerview:1.3.1"
-    // For control over item selection of both touch and mouse driven selection
-    implementation "androidx.recyclerview:recyclerview-selection:1.1.0"
-    implementation "androidx.cardview:cardview:1.0.0"
 
-    testImplementation 'junit:junit:4.12'
-    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-
-    implementation 'org.osmdroid:osmdroid-android:6.1.13'
-    implementation 'org.osmdroid:osmdroid-shape:6.1.16'
-    implementation 'com.github.MKergall:osmbonuspack:6.9.0'
-
-    // Import the Firebase BoM
-    implementation platform('com.google.firebase:firebase-bom:32.1.1')
-
-
-    // TODO: Add the dependencies for Firebase products you want to use
-    // When using the BoM, don't specify versions in Firebase dependencies
-    implementation 'com.google.firebase:firebase-analytics'
-
-
-    // Add the dependencies for any other desired Firebase products
-    // https://firebase.google.com/docs/android/setup#available-libraries
-    implementation("com.google.firebase:firebase-auth")
-    implementation("com.google.firebase:firebase-firestore")
-
-    implementation 'com.firebaseui:firebase-ui-auth:7.2.0'
-    // Declare the dependency for the Cloud Firestore library
-    // When using the BoM, you don't specify versions in Firebase library dependencies
-    implementation("com.google.firebase:firebase-firestore")
-    implementation("com.google.firebase:firebase-storage")
+task clean(type: Delete) {
+    delete rootProject.buildDir
 }
