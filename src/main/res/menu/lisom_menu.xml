@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/lisomCurrLoc"
+        android:icon="@drawable/baseline_my_location_24"
+        app:showAsAction="ifRoom"
+        android:onClick="onGotoCurrentLocationAction"
+        android:title="CurrentLocation">
+    </item>
+    <item
+        android:id="@+id/lisomLayers"
+        android:icon="@drawable/baseline_layers_24"
+        app:showAsAction="always"
+        android:title="Layers">
+
+        <menu >
+            <group android:id="@+id/layersgroup1" android:checkableBehavior="all">
+<!--                <item android:id="@+id/submenu1" android:title="SubMenu No. 1" android:checked="true"/>-->
+<!--                <item android:id="@+id/submenu2" android:title="SubMenu No. 2" />-->
+            </group>
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/lisomFeed"
+        android:icon="@drawable/baseline_rss_feed_24"
+        app:actionLayout="@layout/rss_menuitem_custom_layout"
+        app:showAsAction="always"
+        android:title="GeoRSSFeed">
+    </item>
+
+    <item
+        android:id="@+id/lisomDocs"
+        android:icon="@drawable/baseline_folder_24"
+        app:showAsAction="always"
+        android:title="Docs"
+        android:onClick="onGotoDocsAction">
+    </item>
+
+    <item
+        android:id="@+id/lisomBaseMap"
+        android:icon="@drawable/baseline_map_24"
+        app:showAsAction="ifRoom"
+        android:title="BaseView"
+        >
+
+        <menu >
+            <group android:id="@+id/basemapgroup2" android:checkableBehavior="single" >
+                <item android:id="@+id/submenu1_mapnik" android:title="Navigation View" android:checked="true" android:onClick="onChangeBaseMapToMapnikAction"/>
+                <item android:id="@+id/submenu2_satellite" android:title="Satellite View" android:onClick="onChangeBaseMapToSatelliteAction" />
+            </group>
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/lisomProjects"
+        android:icon="@drawable/baseline_apps_24"
+        app:showAsAction="ifRoom|withText"
+        android:title="Projects">
+
+        <menu>
+            <group android:id="@+id/projectsgroup1" android:checkableBehavior="single" >
+            </group>
+        </menu>
+    </item>
+<!--    <item-->
+<!--        android:id="@+id/lisomProfile"-->
+<!--        android:icon="@drawable/baseline_man_2_24"-->
+<!--        app:showAsAction="ifRoom|withText"-->
+<!--        android:title="Profile">-->
+<!--    </item>-->
+
+    <item
+        android:id="@+id/lisomLogout"
+        android:icon="@drawable/baseline_logout_24"
+        app:showAsAction="ifRoom|withText"
+        android:onClick="onLogoutAction"
+        android:title="Logout">
+    </item>
+</menu>
+

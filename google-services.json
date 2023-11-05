@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "948522224920",
+    "project_id": "manvijlabs",
+    "storage_bucket": "manvijlabs.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:948522224920:android:1dbb4fee8ab0b66438e26d",
+        "android_client_info": {
+          "package_name": "ir.aio.osm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "948522224920-q14bife6rjbd24k8283nmbtb20pngcgv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "ir.aio.osm",
+            "certificate_hash": "8ef331053630085f0542e766099df0db6ef69e57"
+          }
+        },
+        {
+          "client_id": "948522224920-m4kics7q1ri5tavvspekal19tep40l5f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAiGWRyLm2ryv8fr3mMNFUsPMAbOY3BTqU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "948522224920-jdlb3qsmes5ehshondh3vj3598l139c9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

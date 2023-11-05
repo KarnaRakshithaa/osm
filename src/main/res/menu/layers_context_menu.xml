@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/lisomLayers"
+        android:icon="@drawable/baseline_layers_24"
+        android:title="Feature Layers">
+
+        <menu >
+            <group android:id="@+id/layersContextGroup1" android:checkableBehavior="all">
+
+            </group>
+        </menu>
+    </item>
+
+    <item android:id="@+id/submenu_overlay_mgmt" android:title="Management" >
+        <menu>
+            <group android:id="@+id/mgmtoverlaygrp" android:checkableBehavior="all">
+                <item android:id="@+id/submenu_mgmt_estcost" android:title="Estimated Cost" />
+                <item android:id="@+id/submenu_mgmt_land_status" android:title="Land Status" />
+                <item android:id="@+id/submenu_mgmt_tendors" android:title="Tendors"  />
+                <item android:id="@+id/submenu_mgmt_epc" android:title="EPC Contractors"  />
+                <item android:id="@+id/submenu_mgmt_issues" android:title="Issues"  />
+            </group>
+        </menu>
+    </item>
+
+    <item android:id="@+id/submenu_overlay_docs" android:title="Documents" >
+        <menu>
+
+            <group android:id="@+id/docoverlaygrp" android:checkableBehavior="all">
+                <item android:id="@+id/submenu_doc_fls_survey" android:title="FLS Survey" />
+                <item android:id="@+id/submenu_doc_soil" android:title="Soil and Hydrology" />
+                <item android:id="@+id/submenu_doc_pet" android:title="PET Survey"  />
+
+            </group>
+        </menu>
+
+    </item>
+</menu>

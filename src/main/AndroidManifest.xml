@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="ir.sana.osm">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/lisom_launcher_foreground"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/lisom_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity
+            android:name="com.lisom.docs.DocBrowseActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.lisom.feed.NewFeedItemActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.lisom.feed.RSSFeedItemDetailViewActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.lisom.feed.RSSFeedActivity"
+            android:exported="false" />
+
+        <meta-data
+            android:name="HEREWEGO_MAPID"
+            android:value="hybrid.day" />
+        <meta-data
+            android:name="HEREWEGO_APPID"
+            android:value="h5DXMtjHhOtC8fiyn1PB" />
+        <meta-data
+            android:name="HEREWEGO_APPCODE"
+            android:value="wgyDBe192rgMY6CG7aBO-A" />
+
+        <activity
+            android:name=".OsmActivity"
+            android:exported="true"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
